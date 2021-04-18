@@ -49,7 +49,9 @@ class Caltech(VisionDataset):
         img_name = os.path.join(self.root, self.caltech_frame.iloc[index, 0])
         label = img_name.split("/")[3]
         name = img_name.split("/")[4]
-        image = io.imread("Caltech101/101_ObjectCategories/"+"/"+label+"/"+name)
+        #image = io.imread("Caltech101/101_ObjectCategories/"+"/"+label+"/"+name)
+        image = io.imread("suca")
+        
         image = Image.fromarray(image)
         sample = {'image' : image, 'label' : label} # Provide a way to access image and label via index
                            # Image should be a PIL Image
