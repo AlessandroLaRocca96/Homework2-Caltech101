@@ -24,7 +24,7 @@ class Caltech(VisionDataset):
                            # (split files are called 'train.txt' and 'test.txt')
 
 
-        self.root = root+"/"+split+".txt" #./root/train.txt
+        self.root = root+"/"+split+".txt" #./train.txt
         self.caltech_frame = pd.read_csv(self.root, delimiter = '\n', header=None)
         self.transform = transform
         self.target_transform = target_transform
@@ -55,7 +55,7 @@ class Caltech(VisionDataset):
         
         name = img_name.split("/")[4]
 
-        image = io.imread("./root/101_ObjectCategories/"+"/"+label+"/"+name)
+        image = io.imread("./101_ObjectCategories/"+"/"+label+"/"+name)
         image = Image.fromarray(image)
         sample = {'image' : image, 'label' : label} # Provide a way to access image and label via index
                            # Image should be a PIL Image
