@@ -46,11 +46,10 @@ class Caltech(VisionDataset):
         Returns:
             tuple: (sample, target) where target is class_index of the target class.
         '''
-        img_name = os.path.join(self.root, self.caltech_frame.iloc[index, 0])
+        img_name = os.path.join(self.root+"suca", self.caltech_frame.iloc[index, 0])
         label = img_name.split("/")[3]
         name = img_name.split("/")[4]
-        #image = io.imread("Caltech101/101_ObjectCategories/"+"/"+label+"/"+name)
-        image = io.imread("suca")
+        image = io.imread("./101_ObjectCategories/"+"/"+label+"/"+name)
         
         image = Image.fromarray(image)
         sample = {'image' : image, 'label' : label} # Provide a way to access image and label via index
