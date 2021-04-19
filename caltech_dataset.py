@@ -26,7 +26,7 @@ class Caltech(VisionDataset):
 
         self.root = root+"/"+split+".txt" #./train.txt
         self.caltech_frame = pd.read_csv(self.root, delimiter = '\n', header=None)
-        self.transform = transform
+        self.transform = transformmmmm
         self.target_transform = target_transform
 
         '''
