@@ -25,7 +25,7 @@ class Caltech(VisionDataset):
         self.split = split  # This defines the split you are going to use
         # (split files are called 'train.txt' and 'test.txt')
 
-        self.root = root + "/" + split + ".txt"  # Caltech101/train.txt
+        self.rooooot = root + "/" + split + ".txt"  # Caltech101/train.txt
         self.caltech_frame = pd.read_csv(self.root, delimiter='\n', header=None)
         self.transform = transform
         self.target_transform = target_transform
