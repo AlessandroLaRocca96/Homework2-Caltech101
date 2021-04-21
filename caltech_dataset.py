@@ -61,7 +61,7 @@ class Caltech(VisionDataset):
         if self.transform is not None:
             image = self.transform(image)
 
-        return image, lable
+        return image, label
 
     def __len__(self):
         '''
